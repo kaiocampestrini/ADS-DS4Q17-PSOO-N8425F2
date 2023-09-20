@@ -37,7 +37,7 @@ class Program
         Aluno aluno2 = new Aluno
         {
             Nome = "Leonardo",
-            RA = "15648",
+            RA = "123456",
         };
 
         Console.WriteLine("Informações do Aluno de Graduação:");
