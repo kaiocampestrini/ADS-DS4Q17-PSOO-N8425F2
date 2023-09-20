@@ -1,0 +1,49 @@
+using System;
+
+class Aluno
+{
+    public string Nome { get; set; }
+    public int RA { get; set; }
+
+    public void MostrarInformacoes()
+    {
+        Console.WriteLine($"Nome: {Nome}");
+        Console.WriteLine($"RA: {RA}");
+    }
+}
+
+class AlunoGraduacao : Aluno
+{
+    public string Curso { get; set; }
+
+    public void MostrarInformacoesGraduacao()
+    {
+        MostrarInformacoes();
+        Console.WriteLine($"Curso: {Curso}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        AlunoGraduacao aluno1 = new AlunoGraduacao
+        {
+            Nome = "Kaio",
+            RA = "N8425F2",
+            Curso = "ADS"
+        };
+
+        Aluno aluno2 = new Aluno
+        {
+            Nome = "Leonardo",
+            RA = "15648",
+        };
+
+        Console.WriteLine("Informações do Aluno de Graduação:");
+        aluno1.MostrarInformacoesGraduacao();
+
+        Console.WriteLine("\nInformações do Aluno:");
+        aluno2.MostrarInformacoes();
+    }
+}
